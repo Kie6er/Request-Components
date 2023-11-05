@@ -1,0 +1,133 @@
+.container {
+	position: relative;
+	width: 45rem;
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	flex-direction: column;
+	padding: 2.4rem 1.6rem;
+
+	&__item {
+		display: flex;
+		gap: 5rem;
+		&-wrapper {
+			display: flex;
+			gap: 1rem;
+		}
+		&-title {
+			flex: 1 1 auto;
+			color: #1f232b;
+			font-size: 1.8rem;
+			font-style: normal;
+			line-height: 2.6rem; /* 144.444% */
+		}
+	}
+}
+.checkbox {
+	&-label {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+
+		span {
+			position: relative;
+			cursor: pointer;
+			color: #1f232b;
+			font-size: 1.6rem;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 2.4rem; /* 150% */
+		}
+
+		input[type="checkbox"] {
+			display: none;
+			&:checked + .checkbox-custom {
+				background: #1698d9 url(./assets/images/check.svg) center no-repeat;
+				box-shadow: inset 0 0 0 0.15rem #1698d9;
+			}
+			&:disabled + .checkbox-custom {
+				cursor: default;
+				background: #dce1ef;
+				box-shadow: inset 0 0 0 0.15rem #8591a9;
+
+				& ~ span {
+					cursor: default;
+				}
+			}
+			&:disabled:checked + .checkbox-custom {
+				cursor: default;
+				background: #8591a9 url(./assets/images/check-disabled.svg) center no-repeat;
+			}
+		}
+
+		&.small {
+			.checkbox-custom {
+				width: 1.6rem;
+				height: 1.6rem;
+				border-radius: 0.4rem;
+				box-shadow: inset 0 0 0 0.1rem #a2adc1;
+			}
+
+			input[type="checkbox"] {
+				&:checked + .checkbox-custom {
+					background: #1698d9 url(./assets/images/check.svg) center / 50% no-repeat;
+					box-shadow: inset 0 0 0 0.1rem #1698d9;
+				}
+				&:disabled + .checkbox-custom {
+					cursor: default;
+					background: #dce1ef;
+					box-shadow: inset 0 0 0 0.1rem #8591a9;
+				}
+				&:disabled:checked + .checkbox-custom {
+					background: #8591a9 url(./assets/images/check-disabled.svg) center / 50% no-repeat;
+				}
+			}
+
+			&.error {
+				.checkbox-custom {
+					box-shadow: inset 0 0 0 0.1rem #f3566a;
+				}
+			}
+		}
+
+		&.error {
+			.checkbox-custom {
+				box-shadow: inset 0 0 0 0.15rem #f3566a;
+			}
+		}
+
+		&:hover {
+			.checkbox-custom {
+				box-shadow: inset 0 0 0 0.15rem #1698d9;
+			}
+			&.small {
+				.checkbox-custom {
+					box-shadow: inset 0 0 0 0.1rem #1698d9;
+				}
+			}
+		}
+	}
+
+	&-custom {
+		cursor: pointer;
+		width: 2.4rem;
+		height: 2.4rem;
+		border-radius: 0.4rem;
+		box-shadow: inset 0 0 0 0.15rem #a2adc1;
+	}
+}
+.error-text {
+	position: absolute;
+	bottom: -1.8rem;
+	left: 0;
+	z-index: 1;
+
+	color: #f3566a;
+	font-size: 1.4rem;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 2rem; /* 142.857% */
+}
+body {
+	padding: 5rem;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Components</title>
+</head>
+
+<body>
+	<div class="container">
+		<!-- Normal -->
+		<div class="container__item">
+			<div class="container__item-title">Normal</div>
+			<div class="container__item-wrapper">
+				<!-- Normal medium-->
+				<label class="checkbox-label">
+					<input type="checkbox" name="#">
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Normal medium with label -->
+				<label class="checkbox-label">
+					<input type="checkbox" name="#">
+					<div class="checkbox-custom"></div>
+					<span>Label</span>
+				</label>
+			</div>
+			<div class="container__item-wrapper">
+				<!-- Normal small-->
+				<label class="checkbox-label small">
+					<input type="checkbox" name="#">
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Normal small with label -->
+				<label class="checkbox-label small">
+					<input type="checkbox" name="#">
+					<div class="checkbox-custom"></div>
+					<span>Label</span>
+				</label>
+			</div>
+		</div>
+		<!-- Active -->
+		<div class="container__item">
+			<div class="container__item-title">Active</div>
+			<div class="container__item-wrapper">
+				<!-- Active medium-->
+				<label class="checkbox-label">
+					<input type="checkbox" name="#" checked>
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Active medium with label -->
+				<label class="checkbox-label">
+					<input type="checkbox" name="#" checked>
+					<div class="checkbox-custom"></div>
+					<span>Label</span>
+				</label>
+			</div>
+			<div class="container__item-wrapper">
+				<!-- Active small-->
+				<label class="checkbox-label small">
+					<input type="checkbox" name="#" checked>
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Active small with label -->
+				<label class="checkbox-label small">
+					<input type="checkbox" name="#" checked>
+					<div class="checkbox-custom"></div>
+					<span>Label</span>
+				</label>
+			</div>
+		</div>
+		<!-- Disabled -->
+		<div class="container__item">
+			<div class="container__item-title">Disabled</div>
+			<div class="container__item-wrapper">
+				<!-- Disabled medium-->
+				<label class="checkbox-label">
+					<input type="checkbox" name="#" disabled checked>
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Disabled medium with label -->
+				<label class="checkbox-label">
+					<input type="checkbox" name="#" disabled>
+					<div class="checkbox-custom"></div>
+					<span>Label</span>
+				</label>
+			</div>
+			<div class="container__item-wrapper">
+				<!-- Disabled small-->
+				<label class="checkbox-label small">
+					<input type="checkbox" name="#" disabled checked>
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Disabled small with label -->
+				<label class="checkbox-label small">
+					<input type="checkbox" name="#" disabled>
+					<div class="checkbox-custom"></div>
+					<span>Label</span>
+				</label>
+			</div>
+		</div>
+		<!-- Error -->
+		<form class="container__item form">
+			<div class="container__item-title">Error</div>
+			<div class="container__item-wrapper">
+				<!-- Error medium-->
+				<label class="checkbox-label error">
+					<input type="checkbox" name="#" data-required="true">
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Error medium with label -->
+				<label class="checkbox-label error">
+					<input type="checkbox" name="#" data-required="true">
+					<div class="checkbox-custom"></div>
+					<span>Label <p class="error-text">Подсказка</p></span>
+				</label>
+			</div>
+			<div class="container__item-wrapper">
+				<!-- Error small-->
+				<label class="checkbox-label small error">
+					<input type="checkbox" name="#" data-required="true">
+					<div class="checkbox-custom"></div>
+				</label>
+				<!-- Error small with label -->
+				<label class="checkbox-label small error">
+					<input type="checkbox" name="#" data-required="true">
+					<div class="checkbox-custom"></div>
+					<span>Label <p class="error-text">Подсказка</p></span>
+				</label>
+			</div>
+			<button type="submit" style="position: absolute; bottom: 0;">Отправить</button>
+		</form>
+	</div>
+</body>
+
+</html>
